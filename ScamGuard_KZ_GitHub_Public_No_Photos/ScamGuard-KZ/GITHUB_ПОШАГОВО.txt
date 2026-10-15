@@ -1,0 +1,34 @@
+SCAMGUARD KZ — КАК ЗАГРУЗИТЬ ИСХОДНИКИ НА GITHUB
+
+1. Распакуйте архив ScamGuard_KZ_GitHub_READY.zip в обычную папку.
+2. Откройте https://github.com и зарегистрируйтесь/войдите.
+3. Откройте https://github.com/new
+4. Repository name: ScamGuard-KZ
+5. Description: Educational antifraud MVP for pre-transfer risk scoring in Kazakhstan.
+6. Visibility: для открытой ссылки комиссии — Public; если пока не готовы публиковать данные команды — Private. Для private комиссия без доступа не увидит файлы.
+7. НЕ добавляйте новый README, .gitignore или License — они уже в папке.
+8. Нажмите Create repository.
+9. На странице нового репозитория нажмите uploading an existing file (или Add file → Upload files).
+10. Откройте РАСПАКОВАННУЮ папку проекта, выделите ВСЁ внутри, в том числе подпапки data, results, docs, tests, tools, и перетащите в окно загрузки GitHub. Не загружайте ZIP вместо исходников. Не перетаскивайте внешнюю папку целиком, иначе README окажется не в корне.
+11. Проверьте, что в списке есть index.html, server.py, README.md, example_transaction.json, папки data/ results/ docs/ tests/ tools/.
+12. В поле Commit message напишите: Initial ScamGuard KZ MVP source and validation.
+13. Нажмите Commit changes (или Propose changes, если так показывает GitHub; завершите подтверждение).
+14. Обновите страницу. README должен отображаться под списком файлов.
+15. Скопируйте ссылку из адресной строки вида https://github.com/ВАШ_ЛОГИН/ScamGuard-KZ.
+16. Именно её вставьте в форму конкурса как ссылку на исходный код.
+
+ЕСЛИ НЕ ХОТИТЕ ВЫКЛАДЫВАТЬ ПОРТРЕТЫ В ИНТЕРНЕТ:
+Берите архив 'ScamGuard_KZ_GitHub_NO_PHOTOS.zip'. Там вместо встроенных личных фото используются заглушки.
+
+НЕЛЬЗЯ ПУБЛИКОВАТЬ: реальные пароли/API-ключи, персональные данные банковских клиентов, SQLite-базы с заявками, .env.
+
+КАК ПРОВЕРИТЬ ПРОЕКТ ЛОКАЛЬНО (НЕ ОБЯЗАТЕЛЬНО ДЛЯ ЗАГРУЗКИ):
+- Сайт: откройте index.html в браузере.
+- Python: установите Python 3.10+.
+- Откройте терминал в папке проекта.
+- Запустите python -m unittest discover -s tests -v
+- Запустите python tools/reproduce_validation.py
+- Локальный API: python server.py; затем откройте http://127.0.0.1:8765
+  (оценка через /v1/transaction/check требует SCAMGUARD_API_KEY в переменной окружения)
+
+ВАЖНО: Это учебный rule-based MVP. Тест 600 операций использует синтетические данные. Нет доказанной эффективности на банковских данных Казахстана.

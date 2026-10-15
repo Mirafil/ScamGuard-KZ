@@ -1,0 +1,16 @@
+{
+  "transaction_id": "txn_demo_1042",
+  "currency": "KZT",
+  "amount": 150000,
+  "requested_at": "2026-10-08T08:34:00+05:00",
+  "context": {
+    "known": false,
+    "usualAmount": 25000,
+    "newAccount": true,
+    "multiSenders": 29,
+    "rapidOutflow": true,
+    "riskyLinks": true,
+    "oddTime": false,
+    "observed_at": "2026-10-08T08:33:00+05:00"
+  }
+}

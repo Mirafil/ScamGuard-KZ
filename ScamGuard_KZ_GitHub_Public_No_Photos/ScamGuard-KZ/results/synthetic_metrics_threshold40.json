@@ -1,0 +1,32 @@
+{
+  "model_version": "rules-mvp-1.0",
+  "dataset": "synthetic_validation_600.csv",
+  "dataset_origin": "Deterministic synthetic lab, seed=20261008, not real bank data",
+  "independent_external_validation": false,
+  "threshold": 40,
+  "warning": "Synthetic only. Not real fraud detection efficacy, baseline is illustrative.",
+  "scamguard": {
+    "n": 600,
+    "tp": 88,
+    "fp": 171,
+    "fn": 40,
+    "tn": 301,
+    "recall": 0.6875,
+    "false_positive_rate": 0.362288,
+    "precision": 0.339768,
+    "f1": 0.45478,
+    "accuracy": 0.648333
+  },
+  "illustrative_baseline": {
+    "n": 600,
+    "tp": 36,
+    "fp": 53,
+    "fn": 92,
+    "tn": 419,
+    "recall": 0.28125,
+    "false_positive_rate": 0.112288,
+    "precision": 0.404494,
+    "f1": 0.331797,
+    "accuracy": 0.758333
+  }
+}
